@@ -10,7 +10,7 @@
 <%= link_to 'Sign In', new_user_session_path %>
 <% else %>
 <a class="active" href="#home">Home</a>
-<%= link_to 'Blog', posts_path %>
+<%= link_to 'Activity Wall', posts_path %>
 <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
 <% end %>
 </div>
@@ -18,6 +18,6 @@
 <div id="sidenav">
 <%= link_to 'About', "/static/about" %>
 <%= link_to 'Lodestone', "https://eu.finalfantasyxiv.com/lodestone/freecompany/9234490298434906735/" %>
-<%= link_to 'Event Calendar', "/" %>
+<%= link_to 'Event Calendar', "/calendar/index" %>
 </div>
 
