@@ -1,17 +1,23 @@
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">   
+</head>
 <%= stylesheet_link_tag "home" %>
 
 <div id='header'></div>
-<h1>Regalia Organiser</h1>
-
+<div class="topnav">
 <% if user_signed_in? == false %>
-  <span>Please log in!</span>
-
-  <%= link_to 'Sign Up', new_user_registration_path %>
-  <%= link_to 'Sign In', new_user_session_path %>
+<%= link_to 'Sign Up', new_user_registration_path %>
+<%= link_to 'Sign In', new_user_session_path %>
 <% else %>
-
+<a class="active" href="#home">Home</a>
 <%= link_to 'Blog', posts_path %>
 <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-
-
 <% end %>
+</div>
+
+<div id="sidenav">
+<%= link_to 'About', "/static/about" %>
+<%= link_to 'Lodestone', "https://eu.finalfantasyxiv.com/lodestone/freecompany/9234490298434906735/" %>
+<%= link_to 'Event Calendar', "/" %>
+</div>
+

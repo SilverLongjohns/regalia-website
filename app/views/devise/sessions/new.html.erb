@@ -1,3 +1,8 @@
+<div id='header'></div>
+<div class="topnav">
+<%= link_to "Home", root_path %>
+</div>
+
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -23,5 +28,4 @@
   </div>
 <% end %>
 
-<%= link_to "Home", root_path %>
 <%= render "devise/shared/links" %>
